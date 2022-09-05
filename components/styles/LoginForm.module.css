@@ -1,0 +1,56 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.loginForm h1 {
+  margin: 0;
+}
+.loginForm h2 {
+  margin: 0;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  font-size: 16px;
+  font-weight: 400;
+}
+.loginForm input {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 500;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 0.8rem;
+  width: 240px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  margin-bottom: 10px;
+}
+.loginForm button {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 500;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 0.5rem;
+  width: 265px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-bottom: 10px;
+  background-color: black;
+  font-size: 16px;
+  color: white;
+}
+.loginForm h3 {
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 16px;
+  font-weight: 500;
+}
+.loginForm h3 span {
+  color: color;
+  font-weight: 600;
+  text-decoration: underline;
+}
