@@ -63,7 +63,6 @@ export default function Draw() {
     setIsLoading(true);
     if (editor) {
       const data = editor.canvas.toJSON();
-      console.log(data);
       const res = await fetch("/api/", {
         method: "POST",
         headers: {
