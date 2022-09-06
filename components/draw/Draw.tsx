@@ -17,10 +17,11 @@ export default function Draw() {
   useEffect(() => {
     if (editor) {
       editor.canvas.isDrawingMode = true;
-      getSavedData();
     }
   }, [editor]);
-  // function to clear, undo, redo, save canvas
+  useEffect(() => {
+    getSavedData();
+  }, []);
   const clearCanvas = () => {
     if (editor) {
       editor.canvas.clear();
