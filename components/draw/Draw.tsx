@@ -5,9 +5,11 @@ import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
 export default function Draw() {
   const { editor, onReady } = useFabricJSEditor();
   const [removedItems, setremovedItems] = useState<any>([]);
+  const [savedDataLoaded, setSavedDataLoaded] = useState(false);
   const getSavedData = async () => {
     const data = await fetch("/api");
     const res = await data.json();
+    setSavedDataLoaded(true);
     editor?.canvas.loadFromJSON(res.json, () => {
       editor?.canvas.renderAll();
     });
@@ -19,7 +21,7 @@ export default function Draw() {
     }
   }, [editor]);
   useEffect(() => {
-    getSavedData();
+    if (!savedDataLoaded) getSavedData();
   }, [getSavedData]);
   const clearCanvas = () => {
     if (editor) {
