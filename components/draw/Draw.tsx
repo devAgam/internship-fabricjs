@@ -8,7 +8,6 @@ export default function Draw() {
   const getSavedData = async () => {
     const data = await fetch("/api");
     const res = await data.json();
-    //  load the saved data
     editor?.canvas.loadFromJSON(res.json, () => {
       editor?.canvas.renderAll();
     });
@@ -21,7 +20,7 @@ export default function Draw() {
   }, [editor]);
   useEffect(() => {
     getSavedData();
-  }, []);
+  }, [getSavedData]);
   const clearCanvas = () => {
     if (editor) {
       editor.canvas.clear();
